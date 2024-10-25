@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "./Header.jsx";
 import ContentTable from "./Content.jsx";
 import Chat from "./Chat.jsx";
