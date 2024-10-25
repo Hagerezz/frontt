@@ -1,6 +1,7 @@
 import "./Signup.css"
 import { Link } from 'react-router-dom'
 import AuthContext from './context/AuthContext'
+import { useState , useContext} from 'react';
 
 function Signup(){
         const [email, setEmail] = useState("")
@@ -23,7 +24,6 @@ function Signup(){
 
     return (
         <div className="backs" id='login'>
-            <Link id="register" to='/login'>Login</Link>
             <form className='forms' onSubmit={handleSubmit}>
                 <h1>Sign up</h1>
                 <input className="email" type="email" placeholder="Enter your Email" onChange={e => setEmail(e.target.value)} />
