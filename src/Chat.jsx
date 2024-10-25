@@ -8,7 +8,8 @@ function Chat({ selectedContact }) {
   const [ws, setWs] = useState(null);
 
   useEffect(() => {
-    const socket = new WebSocket("wss://your-websocket-endpoint.com");
+    // api of web socket
+    const socket = new WebSocket("websocket");
 
     socket.onopen = () => {
       console.log("WebSocket connection established");
