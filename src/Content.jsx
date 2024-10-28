@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import Create_Button from "./Create";
 import Footer from "./Footer";
 import axios from "axios";
+import Default from './assets/default.jpeg'
 
 function ContentTable() {
   const [contacts, setContacts] = useState([]);
@@ -42,7 +43,7 @@ function ContentTable() {
       {contacts.map((contact) => (
         <Content_Chat
           key={contact.id}
-          image={contact.image}
+          image={contact.image || Default}
           name={contact.name}
           lastMessage={contact.lastMessage}
           onClick={() => setSelectedContact(contact)}
